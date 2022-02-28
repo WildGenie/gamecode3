@@ -46,7 +46,7 @@ def resolver(URL, ID, ctxt):
     global resources
 
     if string.find(URL, '#') != -1:
-        URL = URL[0:string.find(URL, '#')]
+        URL = URL[:string.find(URL, '#')]
     if resources.has_key(URL):
         return(StringIO.StringIO(resources[URL]))
     log.write("Resolver failure: asked %s\n" % (URL))

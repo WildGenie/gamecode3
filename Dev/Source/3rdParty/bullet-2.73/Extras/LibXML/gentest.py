@@ -448,7 +448,7 @@ def is_known_return_type(name):
 try:
     input = open("testapi.c", "r")
 except:
-    input = open(srcPref + "testapi.c", "r")
+    input = open(f'{srcPref}testapi.c', "r")
 test = open('testapi.c.new', 'w')
 
 def compare_and_save():
